@@ -7,6 +7,7 @@ Backend: Flask receives the request and fetches a reply from the Gemini API.
 
 API: Gemini API (via google.generativeai) generates responses.
 
+
 ✅ Features:
 Send message via button or pressing Enter
 
@@ -14,3 +15,12 @@ Send message via button or pressing Enter
 
 Gemini AI replies to user prompts
 
+
+🛠 Technologies:
+Flask
+
+HTML/CSS
+
+PyScript
+
+Gemini API
