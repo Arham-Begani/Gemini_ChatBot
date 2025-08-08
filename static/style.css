@@ -38,3 +38,10 @@ h1 {
     margin: 5px;
     color: #28a745;
 }
+
+input[type="text"] {
+    width: 70%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
