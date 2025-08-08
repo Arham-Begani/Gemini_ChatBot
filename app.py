@@ -8,19 +8,22 @@ load_dotenv()
 app = Flask(__name__)
 genai.configure(api_key= os.getenv("keys"))
 model = genai.GenerativeModel('gemini-1.5-flash')
+chat = model.start_chat()
 
-@app.route("/")
+@app.route("/user")
 def home():
     return render_template("index.html")
 
 @app.route("/ask", methods=["POST"])
+
 def ask():
     user_input = request.json.get("message")
     if not user_input:
         return jsonify({"response": "Please enter a message."})
-    
-    response = model.generate_content(user_input)
+
+    response = chat.send_message(user_input)
     return jsonify({"response": response.text})
+
 
 if __name__ == "__main__":
     app.run(debug=False)
