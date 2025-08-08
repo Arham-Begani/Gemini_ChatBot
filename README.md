@@ -23,3 +23,5 @@ PyScript
 Gemini API
 
 NO JAVASCRIPT HAS BEEN USED TO MAKE THIS!!!!
+
+<img width="792" height="584" alt="Screenshot 2025-08-08 175318" src="https://github.com/user-attachments/assets/cf6888cf-2b67-4cbd-a9c0-5e6e0b0a1bf6" />
