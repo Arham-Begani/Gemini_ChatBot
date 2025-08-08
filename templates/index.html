@@ -26,6 +26,11 @@
             import json
             from pyscript import fetch
 
+            js.document.getElementById("user-input").addEventListener("keypress", js.Function.new("e", """
+            if (e.key === 'Enter') {
+                document.getElementById('send-btn').click();
+            }"""))
+
             async def send_message(*args):
                 input_el = js.document.getElementById("user-input")
                 msg = input_el.value
@@ -51,7 +56,7 @@
 
                 chat_box.innerHTML += f'<div class="bot">ChatBot: {reply}</div>'
                 chat_box.scrollTop = chat_box.scrollHeight
-                
+
         </py-script>
 
     </body>
