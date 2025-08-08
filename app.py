@@ -8,3 +8,7 @@ load_dotenv()
 app = Flask(__name__)
 genai.configure(api_key= os.getenv("keys"))
 model = genai.GenerativeModel('gemini-1.5-flash')
+
+@app.route("/")
+def home():
+    return render_template("index.html")
