@@ -40,6 +40,11 @@
                 chat_box.innerHTML += f'<div class="user">You: {msg}</div>'
                 input_el.value = ""
 
+                if msg.lower() == "clear chat":
+                    chat_box.innerHTML = ""
+                    input_el.value = ""
+                    return
+
                 res = await fetch(
                         url="/ask",
                         method="POST",
