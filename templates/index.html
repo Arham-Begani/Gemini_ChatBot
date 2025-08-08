@@ -35,6 +35,23 @@
                 chat_box.innerHTML += f'<div class="user">You: {msg}</div>'
                 input_el.value = ""
 
+                res = await fetch(
+                        url="/ask",
+                        method="POST",
+                        headers={"Content-Type": "application/json"},
+                        body=js.JSON.stringify({"message": msg})
+                    )
+                text = await res.text()
+
+                try:
+                    data = json.loads(text)
+                    reply = data["response"]
+                except Exception as e:
+                    reply = f"Sorry something went wrong.: {e}"
+
+                chat_box.innerHTML += f'<div class="bot">ChatBot: {reply}</div>'
+                chat_box.scrollTop = chat_box.scrollHeight
+                
         </py-script>
 
     </body>
