@@ -1,4 +1,4 @@
-🧠 How It Works:  
+🧠 How It Works: <br\>
 Frontend: Built with HTML + PyScript (Python in browser).
 
 Backend: Flask receives the request and fetches a reply from the Gemini API.
