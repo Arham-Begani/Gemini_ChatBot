@@ -45,3 +45,18 @@ input[type="text"] {
     border: 1px solid #ccc;
     border-radius: 4px;
 }
+
+button {
+    position: relative;
+    left: 3vh;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
