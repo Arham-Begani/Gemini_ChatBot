@@ -11,6 +11,15 @@
 
             <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
         </head>
-
     </head>
+
+    <body>
+        <div class="chat-container">
+            <h1>Gemini Chatbot</h1>
+            <div id="chat-box"></div>
+            <input id="user-input" type="text" placeholder="Type your message..." />
+            <button id="send-btn" py-click="send_message">Send</button>
+        </div>
+    </body>
+
 </html>
