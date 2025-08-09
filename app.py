@@ -10,7 +10,7 @@ genai.configure(api_key= os.getenv("keys"))
 model = genai.GenerativeModel('gemini-1.5-flash')
 chat = model.start_chat()
 
-@app.route("/user")
+@app.route("/")
 def home():
     return render_template("index.html")
 
